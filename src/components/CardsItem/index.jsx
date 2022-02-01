@@ -1,4 +1,5 @@
 import React from 'react';
+import './_pizza-block.scss'
 import AddIcon from '../../icons/AddIcon';
 import Button from '../UI/Button';
 import DoughItem from '../DoughItem'
@@ -35,8 +36,6 @@ const CardsItem = ({
                             />
                         )
                     })}
-                    {/* <li className="active">тонкое</li>
-                    <li>традиционное</li> */}
                 </ul>
                 <ul>
                     {sizeList.map((item, index) => {
@@ -50,9 +49,6 @@ const CardsItem = ({
                             />
                         )
                     })}
-                    {/* <li className="active">26 см.</li>
-                    <li>30 см.</li>
-                    <li>40 см.</li> */}
                 </ul>
             </div>
 

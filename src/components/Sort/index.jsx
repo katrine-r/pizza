@@ -1,4 +1,5 @@
 import React from 'react';
+import './_sort.scss'
 import SortLabel from '../../icons/SortLabel';
 
 const Sort = () => {

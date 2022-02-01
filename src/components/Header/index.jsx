@@ -1,4 +1,5 @@
 import React from 'react'
+import './_header.scss'
 import Logo from '../Logo'
 import HeaderCart from '../HeaderCart'
 

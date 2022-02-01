@@ -1,4 +1,5 @@
 import React from 'react';
+import './_categories.scss'
 import FilterItem from '../FilterItem'
 
 const Filter = ({categoriesList, onClickCategoriesHandler}) => {
