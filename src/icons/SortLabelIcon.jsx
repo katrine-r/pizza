@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SortLabel = ({stroke='#fff'}) => {
+const SortLabelIcon = ({stroke='#fff'}) => {
     return (
         <svg
             width="10"
@@ -17,4 +17,4 @@ const SortLabel = ({stroke='#fff'}) => {
     )
 }
 
-export default SortLabel
+export default SortLabelIcon

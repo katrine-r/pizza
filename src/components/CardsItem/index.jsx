@@ -1,5 +1,4 @@
 import React from 'react';
-import './_pizza-block.scss'
 import AddIcon from '../../icons/AddIcon';
 import Button from '../UI/Button';
 import DoughItem from '../DoughItem'

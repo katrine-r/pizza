@@ -1,12 +1,11 @@
 import React from 'react';
-import './_sort.scss'
-import SortLabel from '../../icons/SortLabel';
+import SortLabelIcon from '../../icons/SortLabelIcon';
 
 const Sort = () => {
     return (
         <div className="sort">
             <div className="sort__label">
-                <SortLabel />
+                <SortLabelIcon />
                 <b>Сортировка по:</b>
                 <span>популярности</span>
             </div>
