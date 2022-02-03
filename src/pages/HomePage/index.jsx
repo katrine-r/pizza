@@ -75,28 +75,30 @@ const HomePage = () => {
     }
 
     return (
-        <div className="wrapper">
-            <Header />
-            <div className="content">
-                <div className="container">
-                    <div className="content__top">
-                        <Filter 
-                            categoriesList={categoriesList}
-                            onClickCategoriesHandler={onClickCategoriesHandler}
-                        />
-                        <Sort />
-                    </div>
-                    <h2 className="content__title">Все пиццы</h2>
-                    <CardsList 
-                        cards={cards} 
-                        doughList={doughList} 
-                        sizeList={sizeList} 
-                        onClickDoughPizzaHandler={onClickDoughPizzaHandler}
-                        onClickSizePizzaHandler={onClickSizePizzaHandler}
-                    />
-                </div>
+        // <div className="wrapper">
+        //     <Header />
+        //     <div className="content">
+        //         <div className="container">
+        <>
+            <div className="content__top">
+                <Filter 
+                    categoriesList={categoriesList}
+                    onClickCategoriesHandler={onClickCategoriesHandler}
+                />
+                <Sort />
             </div>
-        </div>
+            <h2 className="content__title">Все пиццы</h2>
+            <CardsList 
+                cards={cards} 
+                doughList={doughList} 
+                sizeList={sizeList} 
+                onClickDoughPizzaHandler={onClickDoughPizzaHandler}
+                onClickSizePizzaHandler={onClickSizePizzaHandler}
+            />
+            </>
+        //          </div>
+        //     </div>
+        // </div> 
     )
 }
 

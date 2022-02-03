@@ -5,9 +5,9 @@ import ConfusedFaceIcon from "../../icons/ConfusedFaceIcon";
 
 const CartEmptyPage = () => {
   return (
-    <div className="wrapper">
-      <Header />
-      <div className="content">
+    // <div className="wrapper">
+    //   <Header />
+    //   <div className="content">
         <div className="container container--cart">
           <div className="cart cart--empty">
             <h2>
@@ -26,8 +26,8 @@ const CartEmptyPage = () => {
             </a>
           </div>
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 };
 

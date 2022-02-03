@@ -2,17 +2,18 @@ import logo from './../../img/pizza-logo.svg'
 import Logo from '../Logo'
 import React from 'react'
 import CartIcon from '../../icons/CartIcon'
+import { Link } from 'react-router-dom'
 
 const HeaderCart = () => {
     return (
         <div className="header__cart">
-            <a href="/cart.html" className="button button--cart">
+            <Link to="/cart-page" className="button button--cart">
                 <span>520 ₽</span>
                 <div className="button__delimiter"></div>
                 <CartIcon />
                 <CartIcon stroke={'red'} />
                 <span>3</span>
-            </a>
+            </Link>
         </div>
     )
 }

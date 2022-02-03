@@ -10,10 +10,10 @@ import GoBackIcon from "../../icons/GoBackIcon";
 
 const CartPage = () => {
   return (
-    <div className="wrapper">
-      <Header />
+    // <div className="wrapper">
+    //   <Header />
 
-      <div className="content">
+    //   <div className="content">
         <div className="container container--cart">
           <div className="cart">
             <div className="cart__top">
@@ -175,8 +175,8 @@ const CartPage = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 };
 
