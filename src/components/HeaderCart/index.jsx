@@ -1,5 +1,3 @@
-import logo from './../../img/pizza-logo.svg'
-import Logo from '../Logo'
 import React from 'react'
 import CartIcon from '../../icons/CartIcon'
 import { Link } from 'react-router-dom'

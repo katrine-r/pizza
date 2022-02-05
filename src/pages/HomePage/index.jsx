@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './styless.css'
-import Header from '../../components/Header'
 import Filter from '../../components/Filter'
 import Sort from '../../components/Sort'
 import CardsList from '../../components/CardsList'
@@ -75,10 +74,6 @@ const HomePage = () => {
     }
 
     return (
-        // <div className="wrapper">
-        //     <Header />
-        //     <div className="content">
-        //         <div className="container">
         <>
             <div className="content__top">
                 <Filter 
@@ -95,10 +90,7 @@ const HomePage = () => {
                 onClickDoughPizzaHandler={onClickDoughPizzaHandler}
                 onClickSizePizzaHandler={onClickSizePizzaHandler}
             />
-            </>
-        //          </div>
-        //     </div>
-        // </div> 
+        </>
     )
 }
 
