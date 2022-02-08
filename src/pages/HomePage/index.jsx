@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './styless.css'
 import Filter from '../../components/Filter'
 import Sort from '../../components/Sort'
 import CardsList from '../../components/CardsList'
+import DataService from '../../api/DataService'
+import { useDispatch } from 'react-redux'
+import { getData } from '../../store/actions/home'
 
 const HomePage = () => {
 
@@ -72,6 +75,16 @@ const HomePage = () => {
         })
         setSizeList(activeSize)
     }
+
+    const dispatch = useDispatch()
+
+    useEffect(async () => {
+        
+        const data = await DataService.fetchData()
+        console.log('data', data);
+        dispatch(getData(data))
+
+    }, [])
 
     return (
         <>
