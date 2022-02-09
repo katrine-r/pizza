@@ -4,7 +4,7 @@ import PutCartIcon from '../../icons/PutCartIcon';
 import RemoveCartIcon from '../../icons/RemoveCartIcon';
 
 
-const CartItem = ({}) => {
+const CartItem = () => {
 
     return (
         <div className="cart__item">

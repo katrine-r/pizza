@@ -1,22 +1,16 @@
 import React from 'react';
-import FilterItem from '../FilterItem'
 
-const Filter = ({categoriesList, onClickCategoriesHandler}) => {
+const Filter = () => {
     return (
         <div className="categories">
             <ul>
-               {categoriesList.map((item, index) => {
-                   return (
-                        <FilterItem
-                            key={index}
-                            id={item.id}
-                            text={item.text}
-                            active={item.active}
-                            onClickCategoriesHandler={onClickCategoriesHandler}
-                        />
-                   ) 
-               })} 
-            </ul>
+                <li class="active">Все</li>
+                <li>Мясные</li>
+                <li>Вегетарианская</li>
+                <li>Гриль</li>
+                <li>Острые</li>
+                <li>Закрытые</li>
+              </ul>
         </div>
     )
 }
