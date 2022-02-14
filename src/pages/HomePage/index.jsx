@@ -6,6 +6,7 @@ import CardsList from '../../components/CardsList'
 import DataService from '../../api/DataService'
 import { useDispatch, useSelector } from 'react-redux'
 import { getData } from '../../store/actions/home'
+import Loader from '../../components/UI/Loader'
 
 const HomePage = () => {
 
@@ -33,7 +34,7 @@ const HomePage = () => {
             <div className="content__items">
                 {/* {isLoading  */}
                 {!data?.length
-                ? <p>Loading...</p>
+                ? <Loader />
                 : data?.map((i, index) => (
                     <CardsList
                         key={index}
@@ -41,8 +42,7 @@ const HomePage = () => {
                     />
                   ))
                 }
-            </div>
-            
+            </div>  
         </>
     )
 }
