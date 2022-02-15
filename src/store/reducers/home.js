@@ -1,7 +1,8 @@
-import { GET_DATA } from '../types'
+import { GET_DATA, SET_FILTERS } from '../types'
 
 const initialState = {
-    data: []
+    data: [],
+    filters: []
 }
 
 const homeReducer = (state = initialState, {type, payload}) => {
@@ -10,6 +11,11 @@ const homeReducer = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 data: payload
+            }
+        case SET_FILTERS:
+            return {
+                ...state,
+                filters: payload
             }
         default:
             return state

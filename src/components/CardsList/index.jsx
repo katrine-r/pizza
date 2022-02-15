@@ -12,16 +12,18 @@ const CardsList = ({ data }) => {
         price
     } = data
 
+    const [totalPrice, setTotalPrice] = useState(price)
     const [conf, setConf] = useState({
         type: 1,
         radius: 1
     })
 
-    const changeConf = (name, value) => {
+    const changeConf = (name, value, priceValue) => {
         setConf({
             ...conf,
             [name]: value
         })
+        setTotalPrice(price + priceValue)
         // setConf(prev => {...prev, [name]: value})
     }
     
@@ -40,7 +42,7 @@ const CardsList = ({ data }) => {
                             key={i?.type}
                             // className="active"
                             className={classNames({active: i?.type === conf?.type})}
-                            onClick={() => changeConf('type', i?.type)}
+                            onClick={() => changeConf('type', i?.type, i?.price)}
                         >
                             {i?.title}
                         </li>
@@ -52,7 +54,7 @@ const CardsList = ({ data }) => {
                             key={i?.type}
                             // className="active"
                             className={classNames({active: i?.type === conf?.radius})}
-                            onClick={() => changeConf('radius', i?.type)}
+                            onClick={() => changeConf('radius', i?.type, i?.price)}
                         >
                             {i?.title}
                         </li>
@@ -60,7 +62,7 @@ const CardsList = ({ data }) => {
                 </ul>
             </div>
             <div className="pizza-block__bottom">
-                <div className="pizza-block__price">от {price} ₽</div>.
+                <div className="pizza-block__price">от {totalPrice} ₽</div>.
                 <Button>
                     <AddIcon />
                     <span>Добавить</span>
