@@ -18,15 +18,19 @@ const HomePage = () => {
     useEffect(async () => {
         
         const data = await DataService.fetchData()
-        const tags = [...new Set(data.map(i => i?.tags).flat())]
+        const filters = await DataService.fetchFilters()
+        // const tags = [...new Set(data.map(i => i?.tags).flat())]
         console.log('data', data);
 
         dispatch(getData(data))
-        dispatch(setFilters(tags))
-
+        // dispatch(setFilters(tags))
+        dispatch(setFilters(filters))
+        console.log('filters from HomePage', filters)
         // setIsLoading(false)
 
     }, [])
+
+    
 
     return (
         <>

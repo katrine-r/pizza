@@ -12,6 +12,12 @@ const API_URL = process.env.REACT_APP_API_URL
         const data = await response.json()
         return data
     }
+
+    static async fetchFilters() {
+        const response = await fetch(`${API_URL}/filters`)
+        const filters = await response.json()
+        return filters
+    }
 }
 
 export default DataService

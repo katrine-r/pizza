@@ -3,13 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import DataService from '../../api/DataService';
 import { getData } from '../../store/actions/home';
 
-// const filterData = [
-//     'Мясные',
-//     'Вегетарианская',
-//     'Гриль',
-//     'Острые'
-// ]
-
 const Filter = () => {
 
     const dispatch = useDispatch()
@@ -44,7 +37,6 @@ const Filter = () => {
         <div className="categories">
             <ul>
                 <li className={isActive === '' && "active"} onClick={() => fetchFilter()}>Все</li>
-                {/* {filterData?.map(i => ( */}
                 {filters?.map(i => (
                     <li 
                         key={i}
