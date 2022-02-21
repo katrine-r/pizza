@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import AddIcon from '../../icons/AddIcon';
 import Button from '../UI/Button';
 
-const CardsList = ({ data }) => {
+const CardItem = ({ data }) => {
     const {
         title,
         img,
@@ -40,7 +40,6 @@ const CardsList = ({ data }) => {
                     {type?.map(i => (
                         <li 
                             key={i?.type}
-                            // className="active"
                             className={classNames({active: i?.type === conf?.type})}
                             onClick={() => changeConf('type', i?.type, i?.price)}
                         >
@@ -52,7 +51,6 @@ const CardsList = ({ data }) => {
                     {radius?.map(i => (
                         <li 
                             key={i?.type}
-                            // className="active"
                             className={classNames({active: i?.type === conf?.radius})}
                             onClick={() => changeConf('radius', i?.type, i?.price)}
                         >
@@ -73,4 +71,4 @@ const CardsList = ({ data }) => {
     )
 }
 
-export default CardsList
+export default CardItem

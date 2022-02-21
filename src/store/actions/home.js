@@ -1,4 +1,4 @@
-import { GET_DATA, SET_FILTERS } from "../types"
+import { GET_DATA, SET_FILTERS_LIST } from "../types"
 
 export const getData = payload => {
     return {
@@ -7,9 +7,9 @@ export const getData = payload => {
     }
 }
 
-export const setFilters = payload => {
+export const setFiltersList = payload => {
     return {
-        type: SET_FILTERS,
+        type: SET_FILTERS_LIST,
         payload
     }
 }

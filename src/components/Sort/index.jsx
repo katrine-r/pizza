@@ -1,7 +1,7 @@
 import React from 'react';
 import SortLabelIcon from '../../icons/SortLabelIcon';
 
-const Sort = () => {
+const Sort = ({setFilter}) => {
     return (
         <div className="sort">
             <div className="sort__label">
