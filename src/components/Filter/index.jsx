@@ -7,7 +7,7 @@ const Filter = ({setFilter}) => {
 
     const [isActive, setIsActive] = useState('')
 
-    const changeFilter = async (value = '') => {
+    const changeFilter = (value = '') => {
         setFilter(prev => ({...prev, tags: value}))
         setIsActive(value)
     }

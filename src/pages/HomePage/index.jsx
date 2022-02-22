@@ -49,7 +49,8 @@ const HomePage = () => {
                 ? <Loader />
                 : data?.map((i, index) => (
                     <CardItem
-                        key={index}
+                        // key={index}
+                        key={i.img}
                         data={i}
                     />
                   ))

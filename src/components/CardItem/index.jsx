@@ -61,6 +61,7 @@ const CardItem = ({ data }) => {
             </div>
             <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от {totalPrice} ₽</div>.
+                {/* <div className="pizza-block__price">от {price} ₽</div>. */}
                 <Button>
                     <AddIcon />
                     <span>Добавить</span>
