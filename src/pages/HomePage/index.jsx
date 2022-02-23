@@ -15,6 +15,7 @@ const HomePage = () => {
     
     const [filter, setFilter] = useState({
         tags: '',
+        rating: '',
         price: '',
         title: ''
     })

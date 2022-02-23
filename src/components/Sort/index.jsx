@@ -4,6 +4,10 @@ import classNames from 'classnames';
 
 const filters = [
     {
+        title: 'популярности',
+        sortName: 'rating'
+    },
+    {
         title: 'цене',
         sortName: 'price'
     },
@@ -16,19 +20,43 @@ const filters = [
 const Sort = ({setFilter}) => {
 
     const [popupIsVisible, setPopupIsVisible] = useState(false)
-    const [isActive, setIsActive] = useState('sort')
+    const [isActive, setIsActive] = useState('выбрать')
 
     const togglePopup = () => {
         setPopupIsVisible(!popupIsVisible)
     }
 
     const changeFilter = (name, value = '') => {
+        // if (name === 'price') {
+        //     setFilter(prev => ({
+        //         ...prev, 
+        //         price: value,
+        //         title: ''
+        //     }))
+        // } else {
+        //     setFilter(prev => ({
+        //         ...prev, 
+        //         price: '',
+        //         title: value
+        //     }))
+        // }
+
         setFilter(prev => ({
             ...prev, 
-            [name]: value
+            tags: '',
+            rating: '',
+            price: '',
+            title: ''
         }))
+
+        setFilter(prev => ({
+            ...prev, 
+            [name]: value,
+        }))
+        
         setIsActive(name)
         setPopupIsVisible(!popupIsVisible)
+        console.log('name', name)  
     }
 
     return (
